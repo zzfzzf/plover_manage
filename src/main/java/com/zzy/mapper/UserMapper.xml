@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zzy.mapper.UserMapper" >
+    <insert id="addLiveUser"  parameterType="Map">
+        INSERT INTO live_user (
+            id,
+            name,
+        <if test="topImage!=null">
+            top_image,
+        </if>
+        <if test="topContent!=null">
+            top_content,
+        </if>
+            status
+        )
+        VALUES
+        (
+            #{id}
+            ,#{name}
+        <if test="top_image!=null">
+            ,#{topImage}
+        </if>
+        <if test="top_content!=null">
+            ,#{topContent}
+        </if>
+            ,#{status}
+        )
+    </insert>
+
+</mapper>

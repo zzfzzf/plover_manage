@@ -1,0 +1,28 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        //按钮单击时执行
+        $("#testAjax").click(function () {
+            var data = {"name": "赵日天"};
+            $.ajax({
+                url: "http://localhost:8080/plover/live",
+                type: "POST",
+                data: JSON.stringify(data),
+                dataType: 'json',
+                contentType: 'application/json;charset=UTF-8',
+                success: function (result) {
+                    console.log(result);
+                    console.log(JSON.stringify(data));
+                }
+            });
+        });
+    });
+</script>    
+</head>
+    <body>
+        <div id="myDiv"><h2>通过 AJAX 改变文本</h2></div>
+        <button id="testAjax" type="button">Ajax改变内容</button>
+    </body>
