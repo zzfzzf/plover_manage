@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zzy.mapper.LiveMapper">
+    <insert id="addLGrid"  parameterType="Map">
+        INSERT INTO grid (
+            id,
+            name,
+            labels,
+            describtion,
+            user_id,
+            http,
+            image,
+            top_image,
+            status,
+            type
+        )
+        VALUES
+        (
+            #{id}
+            ,#{name}
+            ,#{labels}
+            ,#{describtion}
+            ,#{userId}
+            ,#{http}
+            ,#{image}
+            ,#{topImage}
+            ,#{status}
+            ,#(type)
+        )
+    </insert>
+
+
+
+    <select id="getGrid" parameterType="Map" resultType="Map">
+        select type,labels,id,name,top_image topImage,status,image,describtion,http from grid where id=#{gridId}
+    </select>
+
+    <update id="updateGrid" parameterType="Map">
+        update grid
+        <trim prefix="set" suffixOverrides=",">
+            <if test="labels!=null">name=#{labels},</if>
+            <if test="name!=null">name=#{name},</if>
+            <if test="describtion!=null">describtion=#{describtion},</if>
+            <if test="http!=null">http=#{http},</if>
+            <if test="image!=null">image=#{image},</if>
+            <if test="topImage!=null">top_image=#{topImage},</if>
+            <if test="status!=null">status=#{status},</if>
+            <if test="type!=null">type=#{type},</if>
+        </trim>
+        WHERE id = #{gridId}
+    </update>
+
+    <delete id="deleteGrid" parameterType="Map">
+        delete from grid where id = #{gridId} and user_id = #{userId}
+    </delete>
+
+    <select id="listGrid" parameterType="Map" resultType="Map">
+        select * from grid WHERE user_id = #{userId} and type = #{type}
+    </select>
+</mapper>

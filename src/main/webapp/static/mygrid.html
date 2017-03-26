@@ -1,0 +1,195 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolic a Personal Portfolio Category Flat Bootstarp Responsive Website Template | Contact :: w3layouts</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Portfolic Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'><!--//fonts-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script src="js/ajaxfileupload.js" type="text/javascript"></script>
+
+</head>
+<body>
+<!--header-->
+	<div class="header">
+		<div class="header-top">
+			<div class="container">
+				<div class="top-nav">
+					<span class="menu"> </span>
+					<ul>
+						<ul>
+							<li class="active" ><a href="index.html" >主页  </a> </li>
+							<li><a href="##" data-hover="关于本站" >关于本站 </a></li>
+							<li><a href="##" data-hover="格子管理">格子管理</a></li>
+							<li><a href="##" data-hover="个人博客"> 个人博客</a></li>
+							<li><a href="##" data-hover="后台管理">后台管理 </a></li>
+						</ul>
+					</ul>
+					<!--script-->
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+				</div>
+			
+		
+			<div class="header-top-on">
+				<ul class="social-in">
+					<li><a href="#"><i> </i></a></li>						
+					<li><a href="#"><i class="tin"> </i></a></li>
+					<li><a href="#"><i class="gmail"> </i></a></li>
+					<li><a href="#"><i class="dribble"> </i></a></li>
+					<li><a href="#"><i class="browser"> </i></a></li>
+				</ul>
+			</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+			<!---->
+		<div class="container">
+			<div class="header-bottom">
+				<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt="" ></a>
+			</div>
+					<div class="search">
+						<form>
+							<input type="text" value="Search the site..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" >
+							<input type="submit" value="">
+						</form>
+					</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!---->
+	
+	<!--content-->
+<div class="content">
+	<div class="container">
+		<div class="contact-left">
+				  	<h2>SHOW</h2>
+					    <form>
+								<div class="col-md-6 contact-grid">
+									<div class="col-md-12">
+										<p class="your-para">您的昵称</p>
+										<input class="form-control" type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+									</div>
+									<div class="col-md-12">
+										<p class="your-para">您的邮箱</p>
+										<input class="form-control" type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+									</div>
+									<div class="col-md-12">
+										<p class="your-para">您的链接</p>
+										<input class="form-control" type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+									</div>
+
+								</div>
+						<div class="col-md-6 contact-grid">
+							<div class="col-md-6">
+								<p class="your-para">简略图</p>
+								<img id="showSimple" src="images/ban.jpg" style="height: 143px;width:100%;margin-top:10px;">
+								<div class="input-group">
+										<span class="input-group-btn">
+											<Button class="btn btn-success" style="height: 34px;">选择文件</Button>
+										</span>
+											<input readonly class="form-control" type="text" id="simpleInput">
+									</div>
+									<input id="jianluetu" onchange="upload(this)" class="form-control" type="file" name="simpleImage" />
+							</div>
+							<div class="col-md-6">
+									<p class="your-para">置顶图</p>
+									<img id="showTop" src="images/ban.jpg" style="height: 143px;width:100%;margin-top:10px;">
+								<div class="input-group" >
+										<span class="input-group-btn">
+											<Button class="btn btn-success" style="height: 34px;">选择文件</Button>
+										</span>
+									 <input readonly class="form-control" type="text" id="topInput">
+								</div>
+								<input  id="zhidingtu" onchange="upload(this)" class="form-control" type="file" name="topImage"/>
+							</div>
+
+                        </div>
+
+								<div class="col-md-12 contact-grid" style="margin-top: -20px;">
+									<div class="col-md-12">
+										<p class="your-para">您的信息</p>
+										<textarea cols="12" rows="6" value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = '';}"></textarea>
+									</div>
+									</div>
+
+								<div class="send" style="text-align: center">
+								<input type="button" value="提交" style="">
+								</div>
+							</form>
+
+				  </div>
+	</div>
+</div>
+		<!---->
+		<div class="footer">
+			<div class="container">
+			<p class="footer-class">Copyright © 2015 Portfolic Template by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+			</div>
+
+			 <script type="text/javascript">
+
+                 function upload(event) {
+					 var $show = $("#showSimple")
+                     var fileId = $(event).attr("id")
+                     var url = 'http://127.0.0.1:8080/plover/upload/simple'
+                     if(fileId=="zhidingtu"){
+                         url = 'http://127.0.0.1:8080/plover/upload/top'
+						 $show = $("#showTop")
+					 }
+                     $("#simpleInput").val($("#jianluetu").val().split("\\")[2]) ;
+                     $("#topInput").val($("#zhidingtu").val().split("\\")[2]) ;
+                     $.ajaxFileUpload
+                     (
+                             {
+                                 url: url, //用于文件上传的服务器端请求地址
+                                 secureuri: false, //是否需要安全协议，一般设置为false
+                                 fileElementId: fileId, //文件上传域的ID
+                                 dataType: 'content', //返回值类型 一般设置为json
+                                 success: function (data,status)  //服务器成功响应处理函数
+                                 {
+									 $show.attr("src",data.data);
+                                 },
+                                 error: function (data, status, e)//服务器响应失败处理函数
+                                 {
+                                     alert(e);
+                                 }
+                             }
+                     )
+                     return false;
+                 };
+						$(document).ready(function() {
+							$().UItoTop({ easingType: 'easeOutQuart' });
+
+						});
+					</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;">xxxxxxxxxxxxxxxxx </span></a>
+		</div>
+
+</body>
+</html>
