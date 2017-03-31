@@ -1,16 +1,12 @@
-package com.zzy;
+package com.zzy.util;
 import com.sun.mail.util.MailSSLSocketFactory;
 
-import javax.mail.Address;
-import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Date;
 import java.util.Properties;
-
-import static java.awt.SystemColor.text;
 
 public class MailUtil {
 
@@ -60,6 +56,7 @@ public class MailUtil {
         transport.connect(MY_EMAIL, MY_CODE);
         transport.sendMessage(message, message.getAllRecipients());
         transport.close();
+
     }
 }
 

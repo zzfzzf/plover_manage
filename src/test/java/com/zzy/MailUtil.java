@@ -12,7 +12,7 @@ import java.util.Properties;
 
 import static java.awt.SystemColor.text;
 
-public class Test {
+public class MailUtil {
 
     // 发件人的 邮箱 和 密码（替换为自己的邮箱和密码）
     // PS: 某些邮箱服务器为了增加邮箱本身密码的安全性，给 SMTP 客户端设置了独立密码（有的邮箱称为“授权码”）,
@@ -47,12 +47,6 @@ public class Test {
         // 2. From: 发件人
         message.setFrom(new InternetAddress(MY_EMAIL, "龙猫网络", "UTF-8"));
         // 3. To: 收件人（可以增加多个收件人、抄送、密送）
-        /*//    To: 增加收件人（可选）
-        message.addRecipient(MimeMessage.RecipientType.TO, new InternetAddress("dd@receive.com", "USER_DD", "UTF-8"));
-        //    Cc: 抄送（可选）
-        message.setRecipient(MimeMessage.RecipientType.CC, new InternetAddress("ee@receive.com", "USER_EE", "UTF-8"));
-        //    Bcc: 密送（可选）
-        message.setRecipient(MimeMessage.RecipientType.BCC, new InternetAddress("ff@receive.com", "USER_FF", "UTF-8"));*/
         message.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(receiveMail,"尊敬的用户", "UTF-8"));
         // 4. Subject: 邮件主题
         message.setSubject(subject, "UTF-8");
