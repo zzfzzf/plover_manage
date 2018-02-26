@@ -2,6 +2,7 @@ package com.zzy.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -9,5 +10,17 @@ import java.util.Map;
  */
 @Mapper
 public interface UserMapper {
-    int addLiveUser(Map userMap);
+
+
+    Map getUser(Map userMap);
+
+    Map getByUsername(Map userMap);
+
+    int updateUser(Map userMap);
+
+    int updateUserByEmail(Map userMap);
+
+
+
+    int register(Map userMap);
 }

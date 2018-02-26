@@ -128,21 +128,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 
-				<div class="header-top-on">
-					<ul class="social-in">
-						<li><a href="#"><i> </i></a></li>
-						<li><a href="#"><i class="tin"> </i></a></li>
-						<li><a href="#"><i class="gmail"> </i></a></li>
-						<li><a href="#"><i class="dribble"> </i></a></li>
-						<li><a href="#"><i class="browser"> </i></a></li>
-					</ul>
-				</div>
+
 				<div class="clearfix"> </div>
 			</div>
 		</div>
 			<!---->
 		<div class="container">
-
 			<div class="header-bottom">
 				<div class="logo">
 				<a href="index.html"><img src="images/logo.png" alt="" ></a>
@@ -162,21 +153,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--content-->
 <div class="content">
 	<div class="container">
+
 		<div class="contact-left">
 				  	<h2>SHOW</h2>
 					    <form>
 								<div class="col-md-6 contact-grid">
 									<div class="col-md-12">
 										<p class="your-para">您的昵称</p>
-										<input id="live_name" class="form-control" type="text" >
+										<input id="live_name" readonly class="form-control base-message" type="text" value="">
 									</div>
 									<div class="col-md-12">
 										<p class="your-para">您的链接</p>
-										<input id="live_http" class="form-control" type="text">
+										<input id="live_http" readonly class="form-control base-message" type="text" value=""  >
 									</div>
 									<div class="col-md-12">
-										<p class="your-para">您的标签(选填)</p>
-										<input id="live_label" class="form-control" type="text">
+										<p class="your-para">您的标签</p>
+										<input id="live_label" readonly class="form-control base-message" type="text" value="">
 									</div>
 
 
@@ -186,23 +178,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<p class="your-para">简略图</p>
 								<img id="showSimple" src="images/ban.jpg" style="height: 143px;width:100%;margin-top:10px;">
 								<div class="input-group">
-										<span class="input-group-btn">
-											<Button class="btn btn-success" style="height: 34px;">选择文件</Button>
+										<span class="input-group-btn file-name" style="opacity: 0" >
+											<Button id="simpleButton" disabled="disabled" class="btn btn-success" style="height: 34px;">选择文件</Button>
 										</span>
-											<input readonly class="form-control" type="text" id="simpleInput">
+											<input readonly style="opacity: 0" class="form-control file-name" type="text" id="simpleInput">
 									</div>
-									<input id="jianluetu" onchange="upload(this)" class="form-control" type="file" name="simpleImage" />
+									<input id="jianluetu" disabled="disabled" onchange="upload(this)" class="form-control" type="file" name="simpleImage" />
 							</div>
 							<div class="col-md-6">
 									<p class="your-para">置顶图</p>
 									<img id="showTop" src="images/ban.jpg" style="height: 143px;width:100%;margin-top:10px;">
 								<div class="input-group" >
-										<span class="input-group-btn">
-											<Button class="btn btn-success" style="height: 34px;">选择文件</Button>
+										<span class="input-group-btn file-name" style="opacity: 0">
+											<Button id="topButton" disabled="disabled" class="btn btn-success" style="height: 34px;">选择文件</Button>
 										</span>
-									 <input readonly class="form-control" type="text" id="topInput">
+									 <input readonly style="opacity: 0" class="form-control file-name" type="text" id="topInput">
 								</div>
-								<input  id="zhidingtu" onchange="upload(this)" class="form-control" type="file" name="topImage"/>
+								<input  id="zhidingtu" disabled="disabled"  onchange="upload(this)" class="form-control" type="file" name="topImage"/>
 							</div>
 
                         </div>
@@ -210,22 +202,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="col-md-12 contact-grid" style="margin-top: -20px;">
 									<div class="col-md-12">
 										<p class="your-para">您的信息</p>
-										<textarea id="live_describtion" cols="12" rows="6"></textarea>
+										<textarea id="live_describtion" class="base-message" readonly cols="12" rows="6" value=" " ></textarea>
 									</div>
 									</div>
 
 								<div class="send" style="text-align: center">
-
-								<input id="submit" type="button" value="提交"  style="margin-right:20px;">
-									<label>类型:
-									<select id="type">
-										<option value ="live">直播</option>
-										<option value ="taobao">淘宝</option>
-										<option value="single">个人网站</option>
-										<option value="orther">其他</option>
-									</select>
-									</label>
+								<input id="update" type="button" value="修改" style="">
 								</div>
+
+
 							</form>
 
 				  </div>
@@ -234,31 +219,72 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!---->
 		<div class="footer">
 			<div class="container">
-				<p class="footer-class">Copyright © 2050 Plover by  <a href="http://www.dragonscat.com" target="_blank">dragoncat</a></p>
+				<p class="footer-class">Copyright © 2050 Plover by  <a href="http://127.0.0.1" target="_blank">dragoncat</a></p>
 			</div>
 
 			 <script type="text/javascript">
-				 $(function () {
-					 $("#submit").click(function () {
-						 var data ={"type":$("#type").val(),"labels":$("#live_label").val(),"http":$("#live_http").val(),"describtion":$("#live_describtion").val(),"name":$("#live_name").val()};
-						 $.ajax({
-							 url: "http://127.0.0.1/add/grid",
-							 type: "POST",
-							 data: JSON.stringify(data),
-							 dataType: 'json',
-							 contentType: 'application/json;charset=UTF-8',
-							 success: function (result) {
-								 if(result.status==200){
-								 	location.href="mygrid.html"
-								 }
-								 if(result.status==302){
-									 $('.theme-popover').fadeIn(500);
-								 }
-							 }
-						 });
-					 })
-				 })
-                 function upload(event) {
+				 $(function(){
+
+				 	/*获取url参数*/
+					 function getURLParameter(name) {
+						 return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+					 }
+					 var gridId = getURLParameter("gridId")
+					 var data = {"gridId":gridId}
+
+					 $.ajax({
+						 url: "http://127.0.0.1/get/grid",
+						 type: "POST",
+						 data: JSON.stringify(data),
+						 dataType: 'json',
+						 contentType: 'application/json;charset=UTF-8',
+						 success: function (result) {
+						 	if(result.status==200){
+						 		console.log(result.data)
+								$("#live_label").val(result.data.labels);
+								$("#live_http").val(result.data.http);
+								$("#live_describtion").val(result.data.describtion)
+								$("#live_name").val(result.data.name)
+								$("#showSimple").attr("src",result.data.image);
+								$("#showTop").attr("src",result.data.topImage);
+
+							}
+							if(result.status==302){
+								$('.theme-popover').fadeIn(500);
+							}
+						 }
+					 });
+
+					 $("#update").click(function () {
+                        var updateJson = {"gridId":gridId,"label":$("#live_label").val(),"http":$("#live_http").val(),"describtion":$("#live_describtion").val(),"name":$("#live_name").val()}
+                         if($(this).val()=="完成"){
+                             $.ajax({
+                                 url: "http://127.0.0.1/update/grid",
+                                 type: "POST",
+                                 data: JSON.stringify(updateJson),
+                                 dataType: 'json',
+                                 contentType: 'application/json;charset=UTF-8',
+                                 success: function (result) {
+									 if(result.status==200){
+										 window.location.reload();
+										}
+									if(result.status==302){
+										$('.theme-popover').fadeIn(500);
+									}
+                                 }
+                             });
+                         }else{
+                             $(".file-name").css("opacity",1);
+                             $("#simpleButton").removeAttr("disabled");
+                             $(".base-message").removeAttr("readonly");
+                             $("#topButton").removeAttr("disabled");
+                             $("#zhidingtu").removeAttr("disabled");
+                             $("#jianluetu").removeAttr("disabled");
+							 $(this).val("完成")
+                         }
+					 });
+				 });
+				 function upload(event) {
 					 var $show = $("#showSimple")
                      var fileId = $(event).attr("id")
                      var url = 'http://127.0.0.1/upload/simple'
@@ -269,6 +295,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					 }else{
                          $("#simpleInput").val($("#jianluetu").val().split("\\")[2]) ;
                      }
+
+
+
                      $.ajaxFileUpload
                      (
                              {
@@ -276,13 +305,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                  secureuri: false, //是否需要安全协议，一般设置为false
                                  fileElementId: fileId, //文件上传域的ID
                                  dataType: 'content', //返回值类型 一般设置为json
-                                 success: function (data)  //服务器成功响应处理函数
+                                 success: function (data,status)  //服务器成功响应处理函数
                                  {
                                  	if(data.status==200){
 										$show.attr("src",data.data);
 									}else{
-										alert(data.message);
-									}
+									 alert(data.message);
+								 }
                                  },
                                  error: function (data, status, e)//服务器响应失败处理函数
                                  {

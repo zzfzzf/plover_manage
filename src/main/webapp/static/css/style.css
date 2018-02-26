@@ -1,9 +1,48 @@
-/*--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+
+
+
+.col-center-block{
+	float: none;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+.menu{
+	height: 35px;
+	font-size: 20px;
+	text-align: center;
+}
+.menu li{
+	list-style-type:none;
+	float:left;
+	display: inline-block;
+    cursor: pointer;
+	line-height:36px;
+    width:100px;
+	text-align: center;
+
+}
+.menu a{
+	text-decoration: none;
+	font-family: 'Lobster', cursive;
+	color:#292929;
+}
+.menu li:hover{
+	transition: 2s;
+	background-color:#838B8B;
+}
+.deleteButton{
+	width:24px;
+	height: 24px;
+	right: 0;
+	border:0px solid;
+    background-image:url(../images/delete-button.png);
+    background-size:100% 100%;
+	position:absolute;
+}
+
+
+
 #jianluetu{
 
 	cursor: pointer;
@@ -139,7 +178,7 @@ ul.social-in li  i.browser:hover{
 /*----*/
 .top-nav span.menu:before{
 	content: url(../images/menu.png)no-repeat 0px 0px;
-	cursor:pointer;	
+	cursor:pointer;
 	width:100%;
 }
 .top-nav span.menu{
@@ -382,18 +421,26 @@ label.arrow6{
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	width: 23.5%;
+	height:260px;
 	display: none;
-	float: left;
+	/*margin-top:5px;
+	margin-right:0.5em;*/
+	margin: 0 2px 2% 0;
+/*	float: left;*/
 	overflow: hidden;
-	margin: 0 2% 2% 0;
 }
+
+
+
 div#portfoliolist {
 	padding:2em 0;
-}	
+	text-align: center;
+}
 .portfolio-wrapper {
 	overflow:hidden;
 	position: relative !important;
 	background: #fff;
+
 }
 .portfolio-wrapper p{
 	color:#000;
@@ -415,12 +462,11 @@ div#portfoliolist {
 	-webkit-transition: all 300ms!important;
 	-moz-transition: all 300ms!important;
 }
-#portfoliolist .portfolio:nth-child(4),#portfoliolist .portfolio:nth-child(8) {
-	margin:0 0 2% 0;
-}
+
 
 .gir{
-	padding:1em;
+	text-align: left;
+	padding:0.5em;
 }
 .gir h5{
 	color:#787b86;
@@ -430,9 +476,9 @@ div#portfoliolist {
 .gir p{
 	color:#afb2bf;
 	font-size:0.9em;
-	line-height:1.8em;
+	line-height:1.4em;
 	border-top:1px dashed #afb2bf;
-	padding:0.5em 0 0;
+	padding:0.1em 0 0;
 }
 /*----*/
 .about {
@@ -853,7 +899,6 @@ p.message-para{
 	border:  1px solid #a6a9b4;
 }
 .contact-left input[type="button"]{
-	width: 13%;
 	font-size: 1.5em;
 	background: #7e983f;
 	padding: 0.3em 0.7em;
@@ -892,7 +937,7 @@ p.message-para{
 	padding:2em 0;
 }
 p.footer-class {
-	float: right;
+	text-align: center;
 	color: #a6a9b4;
 	font-size: 1.1em;
 }
@@ -1068,12 +1113,7 @@ p.text-in{
 }
 }
 @media(max-width:480px){
-#portfoliolist .portfolio {
-	width: 49%;
-}
-#portfoliolist .portfolio:nth-child(2),#portfoliolist .portfolio:nth-child(6)  {
-	margin: 0 0% 2% 0;
-}
+
 #filters li span {
 	padding: 8px 9px;
 }
@@ -1381,4 +1421,6 @@ p.your-para, p.message-para {
 ul.call-in li span {
 	padding: 0 2em 0 0;
 }
+
+
 }
