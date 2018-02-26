@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .pagination{
     margin:0px auto;
@@ -31,3 +32,38 @@
 
 }
 
+=======
+
+.pagination{
+    margin:0px auto;
+}
+@media screen and (max-width: 992px) {
+    #portfoliolist .portfolio {
+        height:250px;
+    }
+
+}
+
+.gir {
+    height:108px;
+}
+@media screen and (max-width: 480px) {
+
+    .theme-popover{
+        width:100%;
+        height: 390px;
+    }
+
+    .zc-div-width{
+        width:350px;
+    }
+
+    #portfoliolist .portfolio {
+        width: 49%;
+        height:210px;
+        margin:-10px 0;
+    }
+
+}
+
+>>>>>>> 87862a9414168c7958e3f27eded4d0e8c1646de5
